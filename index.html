@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibify</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" media="screen and (max-width: 1450px)" href="phone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img class="logo" src="logo.svg" alt="">
+            <div class="library">
+                <div class="libhead">
+                    <img class="liblogo" src="library.svg" alt="">
+                    <h3>Your library</h3>
+                </div>
+                <ul id="songList">
+
+                </ul>
+            </div>
+            <div class="dev">
+                <p>&copy; Created by Naeem Iqbal, aspiring web developer.</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="head">
+                <img src="logo.svg" alt="" class="logophone">
+                <img class="hamburger invert" src="hamburger.svg" alt="">
+                <button class="mushkul">Sign up</button>
+                <button class="mushkul">Log in</button>
+            </div>
+
+            <div id="popup" class="popup hidden">
+                <p><img src="Mushkula.jpg" alt=""></p>
+                <button id="closePopup">Close</button>
+            </div>
+
+            <div class="playList">
+                <h4>Popular Artists</h4>
+                <div class="cards">
+                    <div class="card" data-playlist="songs.json">
+                        <img class="artist" src="allsongs.jpeg" alt="">
+                        <img src="green.svg" alt="" class="grnbtn">
+                        <h5>All Songs</h5>
+                        <p>Music</p>
+                    </div>
+                    <div class="card" data-playlist="Mohammed Rafi.json">
+                        <img class="artist" src="mrafi.jpeg" alt="">
+                        <img src="green.svg" alt="" class="grnbtn">
+                        <h5>Mohammed Rafi</h5>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card" data-playlist="Ali Zafar.json">
+                        <img class="artist" src="alizafar.jpeg" alt="">
+                        <img src="green.svg" alt="" class="grnbtn">
+                        <h5>Ali Zafar</h5>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card" data-playlist="Arijit Singh.json">
+                        <img class="artist" src="arijit.jpeg" alt="">
+                        <img src="green.svg" alt="" class="grnbtn">
+                        <h5>Arijit Singh</h5>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card" data-playlist="Sonu Nigam.json">
+                        <img class="artist" src="sonu.jpeg" alt="">
+                        <img src="green.svg" alt="" class="grnbtn">
+                        <h5>Sonu Nigam</h5>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card" data-playlist="Shreya Ghoshal.json">
+                        <img class="artist" src="sg.jpg" alt="">
+                        <img src="green.svg" alt="" class="grnbtn">
+                        <h5>Shreya Ghoshal</h5>
+                        <p>Artist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="playbar">
+                <div class="pbtn">
+                    <img class="previous invert" width="35px" src="previous.svg" alt="">
+                    <img class="playmain invert" width="45px" src="play.svg" alt="">
+                    <img class="next invert" width="35px" src="next.svg" alt="">
+                </div>
+                <div class="name">
+                    <div class="songname">Play Music</div>
+                    <input type="range" class="seekbar" value="0" max="100" step="1">
+                </div>
+                <div class="timer">
+                    <span class="time" id="currentTime">0:00</span> / <span id="durationTime">0:00</span>
+                </div>
+                <div class="vsection">
+                    <img width="16px" class="volumesvg invert" src="volume.svg" alt="">
+                    <input type="range" class="volume" value="100" max="100" step="1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

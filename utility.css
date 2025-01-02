@@ -1,0 +1,30 @@
+/* Target the scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  /* Scrollbar track */
+  ::-webkit-scrollbar-track {
+    background: #f4f4f4; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  /* Scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #414141, #afafaf); /* Gradient color */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #f4f4f4; /* Adds spacing around the thumb */
+  }
+  
+  /* Hover effect for scrollbar thumb */
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #000000, #353535); /* Reversed gradient */
+  }
+  
+  /* Scrollbar corner (for resizable elements) */
+  ::-webkit-scrollbar-corner {
+    background: transparent; /* Optional for clean design */
+  }
+  .invert{
+    filter: invert(1);
+}
